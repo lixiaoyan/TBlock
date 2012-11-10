@@ -76,7 +76,7 @@
         var speed=3; //前进速度
         var move_speed=5; //左右移动速度
         var slow_move_speed=2; //慢速左右移动速度
-        var frames=8; //每隔多少帧为一行
+        var frames=10; //每隔多少帧为一行
         var scene=new THREE.Scene();
         var camera=new THREE.PerspectiveCamera(45,scene_width/scene_height,0.1,1000);
         var renderer=new THREE.CanvasRenderer();
@@ -98,7 +98,6 @@
             blocks[i]=new TBlock.Block(proxy);
         }
         var user=new TBlock.User(scene);
-        user.move(width/2,10);
         user.show();
         var time;
         var isdown;
@@ -108,6 +107,7 @@
             for(var i=0;i<count;i++){
                 blocks[i].hide();
             }
+            user.move(width/2,10);
             time=new Date().getTime();
             isdown={
                 left:false,
