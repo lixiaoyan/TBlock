@@ -108,6 +108,7 @@
                 blocks[i].hide();
             }
             user.move(width/2,10);
+            camera.position.x=width/2;
             time=new Date().getTime();
             isdown={
                 left:false,
